@@ -16,12 +16,12 @@ $spec=filter_input(INPUT_POST,'spec');
 
 $a= "INSERT INTO sample2(bikename,bikeinfo) values ('$t1', '$spec')";
 
-
 if ($con->query($a) === TRUE) {
     echo "New record created successfully";
 } else {
     echo "Error: " . $a . "<br>" . $con->error;
 }
+	
 
 $sql="SELECT bikename,bikeinfo FROM sample2 ORDER BY bikename";
 
