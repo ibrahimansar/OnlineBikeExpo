@@ -224,6 +224,7 @@ background: #3366cc;
 color: #fff;
 border: 1px solid #3366cc;
 border-radius: 15px;
+margin-top: 10;
 margin-left: 900;
 }
 input.MyButton:hover {
@@ -231,6 +232,8 @@ color: #311b92;
 background: white;
 border: 1px solid #fff;
 }
+
+
 </style>
 </head>
 <body class="welcome">
@@ -249,6 +252,7 @@ border: 1px solid #fff;
 <H6>roll:11184011</H6>
 <H6>college: dr.sacoe</H6>
  <input class="MyButton" type="button" value="Enter to the Expo" onclick="window.location.href='http://localhost/workspace.php'" />
+ <input class="MyButton" type="button" value="Admin login" onclick="window.location.href='http://localhost/pis.html'" />
 </div>
 
     </span>
