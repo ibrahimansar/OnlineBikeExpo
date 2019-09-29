@@ -24,25 +24,6 @@ body.welcome {
  animation: puff 0.5s 1.8s cubic-bezier(0.55, 0.055, 0.675, 0.19) forwards, borderRadius 0.2s 2.3s linear forwards;
 }
 
-
-input.MyButton {
- width: 300px;
- padding: 20px;
- cursor: pointer;
- font-weight: bold;
- font-size: 150%;
- background: #3366cc;
- color: #fff;
- border: 1px solid #3366cc;
- border-radius: 10px;
-}
-
-input.MyButton:hover {
-color: #ffff00;
-background: #000;
-border: 1px solid #fff;
-}
-
 .welcome #welcome {
   background: #311b92 ;
   width: 56px;
@@ -225,7 +206,7 @@ color: #fff;
 border: 1px solid #3366cc;
 border-radius: 15px;
 margin-top: 10;
-margin-left: 900;
+margin-left: 1000;
 }
 input.MyButton:hover {
 color: #311b92;
@@ -252,7 +233,7 @@ border: 1px solid #fff;
 <H6>roll:11184011</H6>
 <H6>college: dr.sacoe</H6>
  <input class="MyButton" type="button" value="Enter to the Expo" onclick="window.location.href='http://localhost/workspace.php'" />
- <input class="MyButton" type="button" value="Admin login" onclick="window.location.href='http://localhost/pis.html'" />
+ <input class="MyButton" type="button" value="Admin login" onclick="window.location.href='http://localhost/option.html'" />
 </div>
 
     </span>
