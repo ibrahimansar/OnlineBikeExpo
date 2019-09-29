@@ -1,0 +1,103 @@
+<html>
+<head>
+<style>
+
+body.welcome {
+  background: #0028ff;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+p {
+	color:white;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 13px;
+	font-family: "Ariel";
+	font-size: 24px;
+}
+
+div {
+	background: #039be5;
+	width: 1300px;
+	height: 450px;
+	border: 12px blue;
+	padding: 50px;
+	margin 20px;
+	border-radius: 25px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 100px;
+	border: 10px solid white;
+    
+}
+
+H6 {
+	color:white;
+	text-align: left;
+	text-transform: uppercase;
+	letter-spacing: 4px;
+	font-family: "Ariel";
+	font-size: 16px;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+input.MyButton {
+width: 300px;
+padding: 20px;
+cursor: pointer;
+font-weight: bold;
+font-size: 150%;
+background: #3366cc;
+color: #fff;
+border: 1px solid #3366cc;
+border-radius: 15px;
+margin-top: 8;	
+margin-left: 1000;
+}
+input.MyButton:hover {
+color: #311b92;
+background: white;
+border: 1px solid #fff;
+}
+
+
+
+</style>
+</head>
+<body class="welcome">
+
+  <span id="splash-overlay" class="splash"></span>
+  <span id="welcome"></span>
+  <header class="navbar-fixed"> 
+   </header>
+      <span class="container grey-text text-lighten-1 ">
+      <p id="head">ADMIN LOGIN</p>
+
+<div>
+<form method="POST" action="pis2.php">
+<p> updating data</p>
+<h6>Bike Name: <input type="text" name=t1u > </h6> <br/>
+<h6>bike specification: <input type="text" name=t1v > </h6>
+<input class="MyButton" type="submit" value="submit" />
+ <input class="MyButton" type="button" value="preview" onclick="window.location.href='http://localhost/workspace.php'" />
+ <input class="MyButton" type="button" value="back" onclick="window.location.href='http://localhost/option.html'"/>
+
+</form>
+</div>
+
+    </span>
+
+	<form>
+
+</form>
+	
+ </body>
+</html>
