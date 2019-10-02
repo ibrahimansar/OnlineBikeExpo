@@ -4,7 +4,7 @@
 
 body.welcome {
 background: #0028ff;
-overflow: hidden;
+overflow: auto;
 -webkit-font-smoothing: antialiased;
 }
 
@@ -20,7 +20,7 @@ font-size: 24px;
 div {
 background: #039be5;
 width: 1300px;
-height: 450px;
+height: auto;
 border: 12px blue;
 padding: 50px;
 margin 20px;
@@ -73,23 +73,28 @@ border: 1px solid #fff;
 <p id="head">ADMIN LOGIN</p>
 
 <div>
- <form method="POST" action="pis.php" enctype="multipart/form-data">
+
+
+<form method="POST" action="pis.php" enctype="multipart/form-data">
 <p> inserting data</p>
 <h6>Bike Name: <input type="text" name=t1 > </h6>
-<h6>Bike specification :<input  type="text" name =spec > </h6>
-
+<h6>Bike Model: <input type="text" name=m > </h6>
+<h6>engine power:<input type="text" name=power></h6>
+<h6>torgue: <input type="text" name=torque> </h6>
+<h6>ex- showroom price:<input type="text" name=price></h6>
+<h6>horse-power: <input type="text" name=hp></h6>
+<h6>top speed:<input type="text" name=speed></h6> 
+		
 <input class="MyButton" type="submit" value="submit" />
 <input class="MyButton" type="button" value="preview" onclick="window.location.href='http://localhost/workspace.php'" />
-<input class="MyButton" type="button" value="back" onclick="window.location.href='http://localhost/option.html'"/>*/
+<input class="MyButton" type="button" value="back" onclick="window.location.href='http://localhost/option.html'"/>
 
 </form>
 </div>
 
 </span>
 
-<form>
 
-</form>
 
 </body>
 </html>
