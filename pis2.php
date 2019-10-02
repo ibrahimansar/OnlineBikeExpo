@@ -101,11 +101,20 @@ if (mysqli_connect_errno())
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
   }
 $t1u= filter_input(INPUT_POST,'t1u');
-$t1v= filter_input(INPUT_POST,'t1v');
-$imgu= filter_input(INPUT_POST,'imgu');
+$power= filter_input(INPUT_POST,'power');
+$torque= filter_input(INPUT_POST,'torque');
+$hp= filter_input(INPUT_POST,'hp');
+$speed= filter_input(INPUT_POST,'speed');
+$price= filter_input(INPUT_POST,'price');
+$onroad= $price*(107/100);
+$tax= $onroad- $price;
+$spec= "This motor bike is having $power cc engine power and gives $torque nm torgue with $hp horse power. 
+        the top speed of this bike is $speed kmph. the ex-showroom price of this bike is rupees $price. so the on-road price is rupees $onroad
+		so you have to pay the tax of rupees $tax";
 
 
-$b= "UPDATE sample2 SET bikeinfo='$t1v' WHERE bikename='$t1u' ";
+
+$b= "UPDATE sample2 SET bikeinfo='$spec' WHERE bikename='$t1u' ";
 
 if($con->query($b)==TRUE){
 	echo "record updated successfully";
@@ -116,9 +125,9 @@ if($con->query($b)==TRUE){
 		
 $name ='bikename';
 $info ='bikeinfo';
-$imag='image';
+$mod= 'model';
 
-$sql="SELECT bikename,bikeinfo,image FROM sample2 ORDER BY bikename";
+$sql="SELECT bikename,model,bikeinfo FROM sample2 ORDER BY bikename";
 
 
 if ($result=mysqli_query($con,$sql))
@@ -126,8 +135,8 @@ if ($result=mysqli_query($con,$sql))
   echo "<table width='100%'>";
   echo "<tr>";
   echo "<th>" . $name . "</th>";
+  echo "<th>" . $mod . "</th>";
   echo "<th>" . $info . "</th>";
-  echo "<th>" . $imag . "</th>";
   echo "</tr>";
   // Fetch one and one row
   while ($row=mysqli_fetch_row($result))
