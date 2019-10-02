@@ -7,7 +7,7 @@ table td{
  padding: 15px;
  background: white;
  width: 700px;
- font-size: 30px;
+ font-size: 20px;
  text-transform: uppercase;
  color: brown;
 }
@@ -98,13 +98,13 @@ p {
 
 $con=mysqli_connect("localhost","root"," ","student");
 
-$sql="SELECT bikename,bikeinfo FROM sample2 ORDER BY bikename";
+$sql="SELECT bikename,model,bikeinfo FROM sample2 ORDER BY bikename";
 	
 $name ='BIKE NAME';
 $info ='BIKE INFO';
+$mod ='model';
 
-
-$sql="SELECT bikename,bikeinfo FROM sample2 ORDER BY bikename";
+$sql="SELECT bikename,model,bikeinfo FROM sample2 ORDER BY bikename";
 
 
 if ($result=mysqli_query($con,$sql))
@@ -112,7 +112,8 @@ if ($result=mysqli_query($con,$sql))
   echo "<table width='100%'>";
   echo "<tr>";
   echo "<th>" . $name . "</th>";
-  echo "<th>" . $info . "</th>";
+  echo "<th>" . $mod . "</th>";
+  echo "<th>" . $info. "</th>";
   echo "</tr>";
   // Fetch one and one row
   while ($row=mysqli_fetch_row($result))
@@ -121,6 +122,7 @@ if ($result=mysqli_query($con,$sql))
   echo "<tr>";
   echo "<td>" . $row[0] . "</td>";
   echo "<td>" . $row[1] . "</td>";
+  echo "<td>" . $row[2] . "</td>";
   echo "</tr>";
   echo "</table>";
     }
