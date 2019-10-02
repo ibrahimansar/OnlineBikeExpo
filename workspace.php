@@ -8,6 +8,8 @@ table td{
  background: white;
  width: 700px;
  font-size: 30px;
+ text-transform: uppercase;
+ color: brown;
 }
 
 
@@ -100,9 +102,9 @@ $sql="SELECT bikename,bikeinfo FROM sample2 ORDER BY bikename";
 	
 $name ='BIKE NAME';
 $info ='BIKE INFO';
-$imag='image';
 
-$sql="SELECT bikename,bikeinfo,image FROM sample2 ORDER BY bikename";
+
+$sql="SELECT bikename,bikeinfo FROM sample2 ORDER BY bikename";
 
 
 if ($result=mysqli_query($con,$sql))
@@ -111,7 +113,6 @@ if ($result=mysqli_query($con,$sql))
   echo "<tr>";
   echo "<th>" . $name . "</th>";
   echo "<th>" . $info . "</th>";
-  echo "<th>" . $imag . "</th>";
   echo "</tr>";
   // Fetch one and one row
   while ($row=mysqli_fetch_row($result))
@@ -120,7 +121,6 @@ if ($result=mysqli_query($con,$sql))
   echo "<tr>";
   echo "<td>" . $row[0] . "</td>";
   echo "<td>" . $row[1] . "</td>";
-  echo "<td>" . $row[2] . "</td>";
   echo "</tr>";
   echo "</table>";
     }
