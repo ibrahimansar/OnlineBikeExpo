@@ -113,9 +113,8 @@ if($con->query($b)==TRUE){
 	
 $name ='bikename';
 $info ='bikeinfo';	
-$imag='image';
 
-$sql="SELECT bikename,bikeinfo,image FROM sample2 ORDER BY bikename";
+$sql="SELECT bikename,bikeinfo FROM sample2 ORDER BY bikename";
 
 
 if ($result=mysqli_query($con,$sql))
@@ -124,7 +123,6 @@ if ($result=mysqli_query($con,$sql))
   echo "<tr>";
   echo "<th>" . $name . "</th>";
   echo "<th>" . $info . "</th>";
-  echo "<th>" . $imag . "</th>";
   echo "</tr>";
   // Fetch one and one row
   while ($row=mysqli_fetch_row($result))
@@ -133,7 +131,6 @@ if ($result=mysqli_query($con,$sql))
   echo "<tr>";
   echo "<td>" . $row[0] . "</td>";
   echo "<td>" . $row[1] . "</td>";
-  echo "<td>" . $row[2] . "</td>";
   echo "</tr>";
   echo "</table>";
     }
